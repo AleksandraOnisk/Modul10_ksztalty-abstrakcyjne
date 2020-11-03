@@ -1,4 +1,4 @@
-public class ShapeCalculator implements Calc2D, Calc3D {
+public class ShapeCalculator extends LineCalc implements Calc2D, Calc3D {
 
     @Override
     public double calculateArea(Circle circle) {
@@ -12,9 +12,8 @@ public class ShapeCalculator implements Calc2D, Calc3D {
 
     @Override
     public double lineLength(Line2D line) {
-        return Math.sqrt(Math.pow((line.getX2() - line.getX1()), 2) + Math.pow((line.getY2() - line.getY1()), 2));
+        return super.lineLength(line);
     }
-
     @Override
     public double ballVolume(Ball ball) {
         return Shape.BA * Shape.PI * Math.pow(ball.getR(), 3);

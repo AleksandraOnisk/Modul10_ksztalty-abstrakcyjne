@@ -1,6 +1,6 @@
-public class LineCalc extends ShapeCalculator {
-    @Override
+public class LineCalc {
     public double lineLength(Line2D line) {
-        return super.lineLength(line);
+        return Math.sqrt(Math.pow((line.getX2() - line.getX1()), 2) + Math.pow((line.getY2() - line.getY1()), 2));
     }
+
 }
